@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Encuesta Dojo</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <style>
+        h1{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .form{
+            margin-top: 30px;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+        label{
+            margin-top: 5px;
+        }
+        .encuesta{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        select{
+            width: 45%;
+        }
+        input[type=text]{
+            width: 45%;
+        }
+        input[type=submit]{
+            float: right;
+            color: white;
+            background-color: #76a5b0;
+            box-shadow: 2px 2px black;
+        }
+    </style>
+    </head>
+    <body>
+        <div class="container w-50 mt-5" style="border: 1px solid black; height: 500px;">
+            <h1>Encuesta dojo</h1>
+            <form  class="form" action="/enviar" method="post">
+                <div class="encuesta">
+                    <label for="nombre">Your Name:</label>
+                    <input type="text" name="nombre" id="nombre">
+                </div>
+                <div class="encuesta">
+                    <label for="ubicacion">Dojo Location:</label>
+                    <select name="ubicacion" id="ubicacion">
+                        <option value="San Jose">San jose</option>
+                        <option value="Miami">Miami</option>
+                        <option value="Chile">Chile</option>
+                    </select>
+                </div>
+                <div class="encuesta">
+                    <label for="lenguaje">Favorite Language:</label>
+                    <select name="lenguaje" id="lenguaje">
+                        <option value="Python">Python</option>
+                        <option value="Javascript">Javascript</option>
+                        <option value="Rust">Rust</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="controlTextarea1" class="form-label">Comment (optional)</label>
+                    <textarea name="comentarios" class="form-control" id="controlTextarea1" rows="3"></textarea>
+                </div>
+                <input type="submit" value="Button">
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    </body>
+</html>
